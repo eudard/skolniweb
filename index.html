@@ -11,13 +11,14 @@
     <div id="website">
         <header>
             <div class="logo">
-                <img src="img/logo.png" alt="Martin s.r.o.">
+                WoodMaster
             </div>
             <nav>
                 <ul>
                     <li><a href="#">Úvod</a></li>
                     <li><a href="#">Produkty</a></li>
                     <li><a href="#">Kontakt</a></li>
+                    <li><span class="theme-switch"></span></li>
                 </ul>
             </nav>
         </header>
@@ -86,9 +87,38 @@
                 </div>
                 <p>Pokud máte speciální požadavky, můžeme Vám dle Vašeho přání přizpůsobit jakýkoliv produkt.</p>
             </div>
+
+            
         </div>
 
     </div>
+
+    <div class="cta theme-primary">
+        <h2>Zaujali jsme Vás?</h2>
+        <button class="btn">Kontaktujte nás</button>
+    </div>
+
+    <script>
+        const themeSwitch = document.querySelector('.theme-switch');
+
+        themeSwitch.addEventListener('click', () => {
+
+            //když má tlačítko třídu dark, tak ji odebereme a naopak
+            if (themeSwitch.classList.contains('dark')) {
+
+                themeSwitch.classList.remove('dark');
+                document.body.classList.remove('dark-theme');
+            
+            } else {
+                
+                themeSwitch.classList.add('dark');
+                document.body.classList.add('dark-theme');
+            
+            }
+
+        });
+
+    </script>
 
 </body>
 </html>
