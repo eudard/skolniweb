@@ -100,19 +100,38 @@ a {
 	border-radius: 10px;
 }
 
+
 .banner-text h1 {
 	font-size: 48px;
 	font-weight: bold;
 }
 
+
+
 .banner-text p {
 	font-size: 24px;
+}
+
+
+@media (max-width: 768px) {
+	.banner-text h1 {
+		font-size: 28px;
+	}
+	.banner-text p {
+		font-size: 16px;
+	}
 }
 
 .features {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	padding: 30px 10px;
+}
+
+@media (max-width: 768px) {
+	.features {
+		grid-template-columns: 1fr;
+	}
 }
 
 .feature {
@@ -122,6 +141,8 @@ a {
 	padding: 30px;
 	transition: all 0.6s;
 }
+
+
 
 .feature:hover {
 	transform: scale(1.1);
@@ -206,6 +227,12 @@ a {
 	display: flex;
 	margin-bottom: 20px;
 	background-color: #e6e6e6;
+}
+
+@media (max-width: 768px) {
+	.product {
+		display: block;
+	}
 }
 
 .product.reverse {
